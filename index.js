@@ -28,7 +28,40 @@
  *      you need to use loops and fill the cards deck in a loop (Hint: You should use `for` loops, )
  *
  */
-let cards = []; // You will use this array in step 6
+class Card {
+  constructor(number, color) {
+    this.number = number;
+    this.color = color;
+  }
+
+  image = () => {
+    return `./images/${this.color}_${this.number}.png`;
+  };
+}
+let cards = [yellowCard, blueCard, redCard, greenCard];
+const yellow = new Card();
+const blue = new Card();
+const red = new Card();
+const green = new Card();
+array = [yellow, blue, red, green];
+for (let x = 0; x < cards.length; x++) {
+  //cards
+  let card = x;
+
+  for (let y = 0; y < 9; y++) {
+    //cards number
+
+    for (let z = 0; z < 2; z++) {
+      //duplicate number
+      if (cards.length == 0) array[x].push(y, "yellow");
+      else if (cards.length == 1) array[x].number.push(y, "blue");
+      else if (cards.length == 2) array[x].push(y, "red");
+      else if (cards.length == 3) array[x].push(y, "green");
+    }
+  }
+}
+
+// You will use this array in step 6
 
 // Continue the code here 👇🏻
 
